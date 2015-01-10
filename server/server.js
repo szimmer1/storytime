@@ -10,7 +10,3 @@ var imageStore = new FS.Store.S3("images", {
     bucket: process.env['BUCKET_ID'],
     ACL: "public-read"
 });
-
-Images = new FS.Collection("images", {
-    stores: [imageStore]
-});
