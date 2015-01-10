@@ -3,9 +3,11 @@ Template.dropzone.events({
   'dropped #dropzone': function(event, temp) {
     console.log('files dropped');
     FS.Utility.eachFile(event, function(file) {
+      console.log("accessing Images collection");
       var obj = Images.insert(file, function (err, fileObj) {
         //If !err, we have inserted new doc with ID fileObj._id, and
         //kicked off the data upload using HTTP
+        console.log(err);
       });
     });
   }
