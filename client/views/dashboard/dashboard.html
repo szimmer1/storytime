@@ -1,11 +1,15 @@
 <template name="dashboard">
-    <table>
+	<table>
         <thead>
-        <tr>
-            <td>Image1</td>
-            <td>Image2</td>
-            <td>Image3</td>
-        </tr>
         </thead>
+        <tbody>
+        {{#each this}}
+        <tr>
+            <td>
+            	<img style="max-width: 400px; height: auto;" src={{url}} width="400">
+            </td>
+        </tr>
+        {{/each}}
+        </tbody>
     </table>
 </template>
