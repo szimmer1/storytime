@@ -1,4 +1,4 @@
-Template.hello.events({
+Template.dropzone.events({
   // Catch the dropped event
   'dropped #dropzone': function(event, temp) {
     console.log('files dropped');
