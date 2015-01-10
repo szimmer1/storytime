@@ -18,3 +18,4 @@ accounts-password
 aldeed:simple-schema
 aldeed:collection2
 raix:ui-dropped-event
+cfs:filesystem
