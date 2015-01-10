@@ -72,6 +72,7 @@ npm-bcrypt@0.7.7
 observe-sequence@1.0.4
 ordered-dict@1.0.2
 raix:eventemitter@0.1.1
+raix:ui-dropped-event@0.0.7
 random@1.0.2
 reactive-dict@1.0.5
 reactive-var@1.0.4
