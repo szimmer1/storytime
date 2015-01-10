@@ -1,16 +1,27 @@
 <template name="dashboard">
+	{{#if currentUser}}
+
+	<!-- for each event, loop over and add link?  -->
 	<a href="/event/Hardcoded%20Event"><p>Monkeys</p></a>
 	<table>
-        <thead>
-        </thead>
-        <tbody>
-        {{#each this}}
-        <tr>
-            <td>
-            	<a href="/story"><img style="max-width: 400px; height: auto;" src={{url}} width="400"></a>
-            </td>
-        </tr>
-        {{/each}}
-        </tbody>
-    </table>
+    <thead>
+    </thead>
+    <tbody>
+	    {{#each this}}
+	    <tr>
+	        <td>
+	        	<a href="/story"><img style="max-width: 400px; height: auto;" src={{url}} width="400"></a>
+	        </td>
+	    </tr>
+      {{/each}}
+  	</tbody>
+  </table>
+
+	{{else}}
+
+
+		<!-- Enter cool splash page stuff here -->
+
+
+	{{/if}}
 </template>

@@ -1,9 +1,52 @@
 <template name="navigation">
 
-	<!--Our Login Page-->
-	<img src="https://slack-files.com/files-tmb/T03B2V7PL-F03B3QSP6-cfd2f1bf19/logoselectionv2_360.png" 
-	height="100" width="100">
-	
-	<a href="/login">Stingr</a>
+	<div class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/" title='Stingr'>
+
+				<img style="max-height:50px; margin-top: -15px;"
+				src="https://slack-files.com/files-tmb/T03B2V7PL-F03B3QSP6-cfd2f1bf19/logoselectionv2_360.png">
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a id='add-event' href="#">Add Event</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar">
+				{{> loginButtons }} <!-- here -->
+			</ul>
+		</div>
+	</div>
+
+</template>
+
+<template name="navigationbasic">
+
+	<div class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/" title='Stingr'>
+
+				<img style="max-height:50px; margin-top: -15px;"
+				src="https://slack-files.com/files-tmb/T03B2V7PL-F03B3QSP6-cfd2f1bf19/logoselectionv2_360.png">
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar">
+				{{> loginButtons }} <!-- here -->
+			</ul>
+		</div>
+	</div>
 
 </template>
