@@ -1,8 +1,8 @@
 /**
- *Created by mzimmerman on 1/10/15.
+ * Created by mzimmerman on 1/10/15.
  */
 
-Template.mainLayout.events({
+Template.layout.events({
     'click .logout': function() {
         Meteor.logout(function() {
             Router.go('login');
