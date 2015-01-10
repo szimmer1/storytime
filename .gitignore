@@ -1,0 +1,5 @@
+# .gitignore for redundant files
+
+.idea
+
+.DS_Store
