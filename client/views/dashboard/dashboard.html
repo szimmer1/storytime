@@ -1,4 +1,5 @@
 <template name="dashboard">
+    {{#if currentUser}}
     {{> dropzone}}
 	<table>
         <thead>
@@ -13,4 +14,12 @@
         {{/each}}
         </tbody>
     </table>
+
+    {{else}}
+
+
+        <!-- Enter cool splash page stuff here -->
+
+
+    {{/if}}
 </template>
