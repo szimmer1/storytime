@@ -7,11 +7,16 @@ Template.dropzone.events({
         //If !err, we have inserted new doc with ID fileObj._id, and
         //kicked off the data upload using HTTP
         if (!err) {
-          console.log("ALERT! added snapshot with eventId ,1");
-          Snapshots.insert({
-            eventId: ',1',
-            imageId: fileObj._id
-          });
+          debugger;
+          if (Session.get('eventId')) {
+            Snapshots.insert({
+              eventId: Session.get('eventId'),
+              imageId: fileObj._id
+            });
+          }
+          else {
+            console.log("no Session.get('eventId') found");
+          }
         }
         else {
           console.log(err);
