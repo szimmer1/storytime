@@ -1,11 +1,16 @@
 <template name="dashboard">
-    <table>
+	<a href="/event/Hardcoded%20Event"><p>Monkeys</p></a>
+	<table>
         <thead>
-        <tr>
-            <td>Image1</td>
-            <td>Image2</td>
-            <td>Image3</td>
-        </tr>
         </thead>
+        <tbody>
+        {{#each this}}
+        <tr>
+            <td>
+            	<a href="/story"><img style="max-width: 400px; height: auto;" src={{url}} width="400"></a>
+            </td>
+        </tr>
+        {{/each}}
+        </tbody>
     </table>
 </template>
