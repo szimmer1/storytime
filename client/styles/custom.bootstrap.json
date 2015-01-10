@@ -11,8 +11,8 @@
   "buttons":              false,
 
   "glyphicons":           false,
-  "button-groups":        false,
-  "input-groups":         false,
+  "button-groups":        true,
+  "input-groups":         true,
   "navs":                 false,
   "navbar":               true,
   "breadcrumbs":          false,

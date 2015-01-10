@@ -13,3 +13,7 @@ iron:router
 cfs:standard-packages
 matb33:collection-hooks
 cfs:s3
+accounts-ui
+accounts-password
+aldeed:simple-schema
+aldeed:collection2
