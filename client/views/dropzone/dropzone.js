@@ -10,7 +10,8 @@ Template.dropzone.events({
           if (Session.get('eventId')) {
             Snapshots.insert({
               eventId: Session.get('eventId'),
-              imageId: fileObj._id
+              imageId: fileObj._id,
+              createdAt: new Date()
             });
           }
           else {
