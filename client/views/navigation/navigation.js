@@ -18,8 +18,6 @@ Template.navigation.events({
       creatingUserId : userId
     });
 
-    console.log(eventId);
-
     Router.go('events');
   },
 
