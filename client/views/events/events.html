@@ -2,5 +2,6 @@
   <p> Hello Events!</p>
   {{#each this}}
     <a href="{{pathFor 'event' _eventName=name}}" class='eventListing'>#{{name}}</a>
+    <img src={{splashUrl}} style="height:25%;width:25%">
   {{/each}}
 </template>

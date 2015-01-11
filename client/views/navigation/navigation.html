@@ -16,13 +16,35 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a id='add-event' href="#">Add Event</a></li>
+				<li class="active"><a id='add-event' href="#" data-toggle="addEventModal" data-target="#addEventModal">Add Event</a></li>
 			</ul>
 			<ul class="nav navbar-nav"  style="float: right">
 				<li class="active"><a id='logout' href="#"><strong>Logout</strong></a></li>
 			</ul>
 		</div>
 	</div>
+
+    <div class="modal fade" id="addEventModal" tabindex="-1" role="dialog" aria-labelledby="addEventModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h3 class="modal-title" id="myModalLabel">Create Event</h3>
+                </div>
+                <form id="add-event-form">
+                <div class="modal-body">
+						<input id="event-name" placeholder="Event name" class="form-control" required />
+						<p></p>
+                        <input id="event-description" type="text" placeholder="Event description" class="form-control" required />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal">Save Event</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 </template>
 
