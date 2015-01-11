@@ -30,20 +30,20 @@
 
     {{/if}}
 
-    <div class='row'>
+    <div >
         {{#each this}}
-        <div class='col-md-3'>
+        <div class='pull-left' style='max-width:400px;x`'>
         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
         <div class="front">
             <img class='image-stream' src={{imgUrl}}>
         </div>
         <div class="back">
-            <div align='center' style='position:relative;top:50px;height:0px;'>
-            <a href='#' class='upvote' data-target={{_id}}>
+            <div align='center' style='position:relative;top:50px;height:0px;z-index:10'>
+            <a href='#' class='upvote'>
                 <img src="/assets/upvote.png" style="max-height:50px; max-width:50px;">
               </a>
-              <a href='#' class='downvote' data-target={{_id}}>
+              <a href='#' class='downvote'>
                   <img src="/assets/downvote.png" style="max-height:50px; max-width:50px;">
               </a>
           </div>
