@@ -4,11 +4,11 @@
     <div class="owl-carousel">
         {{#each this}}
         	<div>
-        		<!--<img style="max-height:50px; max-width:50px;"
-				src="https://slack-files.com/files-tmb/T03B2V7PL-F03B3QSP6-cfd2f1bf19/logoselectionv2_360.png">-->
-				<button>upvote</button>
+        		<img src="/assets/upvote.png" style="max-height:50px; max-width:50px;"
+				>
             	<a href="/story"><img style="max-width: 400px; height: auto;" src={{imgUrl}} width="400"></a>
-            	<button>downvote</button>
+            	<img src="/assets/downvote.png" style="max-height:50px; max-width:50px;"
+				>
             </div>
         {{/each}}
     </div>
@@ -18,7 +18,6 @@
         </div>
 
         <!-- Enter cool splash page stuff here -->
-
 
     {{/if}}
 </template>

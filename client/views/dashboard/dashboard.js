@@ -21,5 +21,17 @@ Template.dashboard.helpers({
             }
         }
         return "/image_not_found.jpeg"
-    }
+    },
+    timeStamp: function() {
+        var time;
+        if (this) {
+            time = Images.findOne({
+                _id: this.imageId
+            }).uploadedAt;
+        }
+        else {
+            time = "0";
+        }
+        return new Date(time);
+    },
 });
