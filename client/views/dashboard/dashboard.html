@@ -14,6 +14,11 @@
             float: right;
             z-index: 100;
         }
+        .event-snapshot-text {
+            font-size: large;
+            text-align: center;
+            text-color: orange;
+        }
     </style>
 <div id="dropzone" style="height:1000px;">
     {{#if currentUser}}
@@ -28,7 +33,7 @@
         <form class="event-text-form">
             <div class="row">
                 <div class="col-md-10">
-                <input type="text" class="form-control input-lg" placeholder="Post your chapter of the story" >
+                <input type="text" id="event-text" class="form-control input-lg" placeholder="Post your chapter of the story" >
                 </div>
             <div class="col-md-2">
             <button class="btn btn-primary btn-lg" type="submit">Post</button>
@@ -45,23 +50,33 @@
     <div >
         {{#each this}}
         <div class='pull-left' style='max-width:400px;x`'>
-        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
         <div class="front">
+            {{#if isImg}}
             <img class='image-stream' src={{imgUrl}}>
+            {{/if}}
+            {{#if isText}}
+                <p class="event-snapshot-text">{{description}}</p>
+            {{/if}}
         </div>
         <div class="back">
             <div align='center' style='position:relative;top:50px;height:0px;z-index:10'>
-            <a href='#' class='upvote'>
-                <img src="/assets/upvote.png" style="max-height:50px; max-width:50px;">
-              </a>
               <a href='#' class='downvote'>
-                  <img src="/assets/downvote.png" style="max-height:50px; max-width:50px;">
+                  <i class="fa fa-thumbs-down fa-5x" style="color: #CD0000"></i>
+                  <!--<img src="/assets/downvote.png" style="max-height:50px; max-width:50px;">-->
               </a>
-          </div>
+                <a href='#' class='upvote'>
+                    <i class="fa fa-thumbs-up fa-5x" style="color: green"></i>
+                    <!--<img src="/assets/upvote.png" style="max-height:50px; max-width:50px;">-->
+                </a>
+            </div>
+            {{#if isImg}}
             <img class='image-stream filpped-image' style='position:relative;' src={{imgUrl}}>
+            {{/if}}
+            {{#if isText}}
+                <h2 class="event-snapshot-text">{{description}}</h2>
+            {{/if}}
         </div>
-    </div>
 </div>
 
         	<div >
