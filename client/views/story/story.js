@@ -21,6 +21,6 @@ Template.story.helpers({
 				return image.url();
 			}
 		}
-		return "/image_not_found.jpeg"
+		return "/assets/image_not_found.JPG"
 	},
 });
