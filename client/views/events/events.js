@@ -30,7 +30,7 @@ Template.events.helpers({
                 return image.url();
             }
         }
-        return "/assets/public/image_not_found.jpeg"
+        return "/assets/image_not_found.JPG"
     }
 });
 
