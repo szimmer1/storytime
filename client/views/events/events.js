@@ -13,7 +13,7 @@ Template.events.helpers({
     },
     splashUrl: function() {
         var topSnapshot;
-        if (Snapshots.getTopVotedIds(this._id)[0]) {
+        if (Snapshots.getTopVotedArray(this._id)[0]) {
             topSnapshot = Snapshots.getTopVotedIds(this._id)[0];
         }
         else {
