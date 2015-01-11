@@ -7,7 +7,6 @@ Template.dropzone.events({
         //If !err, we have inserted new doc with ID fileObj._id, and
         //kicked off the data upload using HTTP
         if (!err) {
-          debugger;
           if (Session.get('eventId')) {
             Snapshots.insert({
               eventId: Session.get('eventId'),

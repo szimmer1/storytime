@@ -1,20 +1,17 @@
 <template name="dashboard">
     {{#if currentUser}}
     {{> dropzone}}
-	<table>
-        <thead>
-        </thead>
-        <tbody>
+    <div class="owl-carousel">
         {{#each this}}
-        <tr>
-            <td>
+        	<div>
+        		<!--<img style="max-height:50px; max-width:50px;"
+				src="https://slack-files.com/files-tmb/T03B2V7PL-F03B3QSP6-cfd2f1bf19/logoselectionv2_360.png">-->
+				<button>upvote</button>
             	<a href="/story"><img style="max-width: 400px; height: auto;" src={{imgUrl}} width="400"></a>
-            </td>
-        </tr>
+            	<button>downvote</button>
+            </div>
         {{/each}}
-        </tbody>
-    </table>
-
+    </div>
     {{else}}
         <div class="container" style="text-align: center">
             <div class="jumbotron"><h1>Please log in</h1></div>
