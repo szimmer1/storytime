@@ -62,12 +62,14 @@
         </div>
         <div class="back">
             <div align='center' style='position:relative;top:50px;height:0px;z-index:10'>
-            <a href='#' class='upvote'>
-                <img src="/assets/upvote.png" style="max-height:50px; max-width:50px;">
-              </a>
               <a href='#' class='downvote'>
-                  <img src="/assets/downvote.png" style="max-height:50px; max-width:50px;">
+                  <i class="fa fa-thumbs-down fa-5x" style="color: red"></i>
+                  <!--<img src="/assets/downvote.png" style="max-height:50px; max-width:50px;">-->
               </a>
+                <a href='#' class='upvote'>
+                    <i class="fa fa-thumbs-up fa-5x" style="color: green"></i>
+                    <!--<img src="/assets/upvote.png" style="max-height:50px; max-width:50px;">-->
+                </a>
           </div>
             {{#if isImg}}
             <img class='image-stream filpped-image' style='position:relative;' src={{imgUrl}}>

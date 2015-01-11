@@ -47,7 +47,7 @@ Template.dashboard.events({
     },
 
     'submit .event-text-form': function(e,t) {
-        var eventText = $('#event-text').val();
+        var eventText = $('#event-text').val()
         if (eventText.length <= 100) {
             var snapshotId = Snapshots.insert({
                 eventId: Session.get('eventId'),
