@@ -9,7 +9,7 @@ Template.events.helpers({
             topSnapshot = Snapshots.getTopVotedIds(this._id)[0];
         }
         else {
-            topSnapshot = Snapshots.findOne({});
+            topSnapshot = Snapshots.findOne({eventId: this._id});
         }
         if (topSnapshot.url) {
             return topSnapshot.url

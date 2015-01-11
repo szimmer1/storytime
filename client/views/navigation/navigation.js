@@ -5,7 +5,7 @@ Template.navigation.events({
     $('#addEventModal').modal('toggle');
   },
 
-  'submit #add-event-form' : function (event, t) {
+  'click #add-event-form' : function (event, t) {
     event.preventDefault();
 
     var eventName = $('#event-name').val();
@@ -19,6 +19,8 @@ Template.navigation.events({
     });
 
     console.log(eventId);
+
+    Router.go('events');
   },
 
   'click #logout': function(e, t) {
