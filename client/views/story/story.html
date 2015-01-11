@@ -1,14 +1,29 @@
 <template name="story">
+	<style>
+	.storyHeader{
+		height: 100px;
+		border-color: black;
+		border-width: 2px;
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-position: center;
+		font-family: "Quicksand";
+		text-shadow: 0px 5px 7px #000000; /* horiz. shadow, vert. shadow, blur amount, 'color of shadow' */
+		align:center;
+	}
+</style>
 
-	<h1>Story</h1>
+<div>
+	<h1 class="storyHeader">This is Your Story</h1>
 
-<!-- Collage's HTML Portion -->
-<div class="Collage effect-parent">
+	<!-- Collage's HTML Portion -->
+	<div class="Collage effect-parent">
 
-{{#each this}}
-  <img style="max-width: 400px; height: auto;" src={{imgUrl}} width="400">
-{{/each}}
-
-</div>
-
+	{{#each this}}
+	  <img style="max-width: 400px; height: auto;" src={{imgUrl}} width="400">
+	{{/each}}
+	</div>
+</div>	
 </template>
+
+

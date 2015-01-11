@@ -34,7 +34,10 @@ Template.dashboard.helpers({
     },
     isText: function() {
         return (this.type === 'text')
-    }
+    },
+    eventName: function() {
+        return Session.get("eventName");
+    }    
 
 });
 
