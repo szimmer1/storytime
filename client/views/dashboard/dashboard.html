@@ -8,11 +8,13 @@
     <div class="owl-carousel">
         {{#each this}}
         	<div>
-        		<img src="/assets/upvote.png" style="max-height:50px; max-width:50px;"
-				>
-            	<a href="/story"><img style="max-width: 400px; height: auto;" src={{imgUrl}} width="400"></a>
-            	<img src="/assets/downvote.png" style="max-height:50px; max-width:50px;"
-				>
+        		  <a href='#' class='upvote' data-target={{_id}}>
+                <img src="/assets/upvote.png" style="max-height:50px; max-width:50px;">
+              </a>
+            	<img style="max-width: 400px; height: auto;" src={{imgUrl}} width="400">
+              <a href='#' class='downvote' data-target={{_id}}>
+            	  <img src="/assets/downvote.png" style="max-height:50px; max-width:50px;">
+              </a>
             </div>
         {{/each}}
     </div>
