@@ -34,18 +34,10 @@ Template.dashboard.helpers({
 
 Template.dashboard.events({
     // catch the event quote write
-    'click div.dropzone': function(event, t) {
-        $('div.dropzone').hide();
-        $('input.dropzone').show();
+    'click div.event-text': function(event, t) {
+        $('div.event-text').hide();
+        $('input.event-text').show();
     },
-    /*
-    'mouseleave div.dropzone': function(event, t) {
-        $('div.dropzone').show();
-        $('input.dropzone').hide();
-    },
-    */
-
-
 
   'click .upvote' : function(e, t) {
     var snapId = $(e.currentTarget).attr('data-target');

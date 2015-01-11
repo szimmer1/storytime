@@ -1,6 +1,6 @@
 <template name="dashboard">
     <style>
-        .dropzone {
+        .event-text {
             font-size: 40px;
             text-align: center;
             color: gray;
@@ -9,11 +9,9 @@
             width: 30%;
             margin: 50px 0px 50px 0px auto;
             padding: 20px 0px 20px 0px;
-            right: 0;
+            right: 30px;
             cursor: pointer;
-        }
-        .hidden {
-            display: none;
+            position: absolute;
         }
     </style>
 <div id="dropzone" style="height:1000px;">
@@ -22,8 +20,8 @@
     {{#if showDropzone}}
     {{> dropzone}}
     <div class="container-fluid">
-        <div class="dropzone"><i class="fa fa-pencil"></i>  Or tell a story</div>
-        <input class="dropzone" style="display: none;"/>
+        <div class="event-text"><i class="fa fa-pencil"></i>  Or tell a story</div>
+        <input class="event-text" style="display: none;"/>
         <div style="margin: 0px 20px 0px 20px auto; position: relative">
             <h1>Drag in media to share <br>your piece of the story</h1>
         </div>
