@@ -8,7 +8,10 @@
         {{#each this}}
         <tr>
             <td>
-            	<a href="/story"><img style="max-width: 400px; height: auto;" src={{imgUrl}} width="400"></a>
+            	<img style="max-width: 400px; height: auto;" src={{imgUrl}} width="400">
+            </td>
+            <td>
+                {{timeStamp}} <!-- this is a JS Date object -->
             </td>
         </tr>
         {{/each}}
