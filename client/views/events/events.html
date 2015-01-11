@@ -18,7 +18,7 @@
 
   {{#each this}}
   <a href="{{pathFor 'event' _eventName=name}}" class='eventListing' style="color: white;">
-    <a href="javascript:void(0)"><i class="fa fa-remove"></i></a>
+    {{#if isCreator}}<a href="javascript:void(0)"><i class="fa fa-remove"></i></a>{{/if}}
       <div class="eventBlock" style="background-image:url('{{splashUrl}}')">
      <p style="font-size: 100px; text-align: center; padding: 20px 0px 0px 0px">#{{name}}</p>
    </div>

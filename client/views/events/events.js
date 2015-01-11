@@ -8,6 +8,9 @@ Template.events.events({
 });
 
 Template.events.helpers({
+    isCreator: function() {
+        return (Meteor.userId() === this.creatingUserId)
+    },
     splashUrl: function() {
         var topSnapshot;
         if (Snapshots.getTopVotedIds(this._id)[0]) {
