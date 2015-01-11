@@ -1,12 +1,13 @@
 .image-stream{
 	border:0px;
 	width: 100%;
-	height: auto; 
+	height: auto;
 }
 
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000;
+	padding: 0px 5px 15px 5px;
 }
 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -23,6 +24,11 @@
 	transform-style: preserve-3d;
 
 	position: relative;
+}
+
+.flipper img{
+	border: 3px solid #FFF;
+	border-radius: 3px;
 }
 
 /* hide back of pane during swap */
@@ -53,7 +59,7 @@
         transform: scaleX(-1);
         filter: FlipH;
         -ms-filter: "FlipH";
-        opacity: .2	
+        opacity: .2
 }
 
 .hidden-image{
