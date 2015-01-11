@@ -3,15 +3,17 @@
     <div class="jumbotron">
 
       {{#if isLoginForm}}
-      <h1>Please log in</h1>
+      <img src="/assets/logo_vector.png" style="width:400px;height:250px;">
+      <h1>Stingr</h1>
+      <h2>Log In</h2>
       <form class="form-signin">
         <input id="signin-email" type="email" class="form-control" placeholder="Email" required autofocus>
         <input id="signin-password" type="password" class="form-control" placeholder="Password" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">
-          Sign in
+          Sting In
         </button>
       </form>
-      <button class="btn btn-sm btn-enroll" style="float: left; margin-top: 15px">Create User?</button>
+      <button class="btn btn-sm btn-enroll" style="float: left; margin-top: 15px">Create Stingr</button>
       {{/if}}
 
       {{#if isEnrollForm}}
