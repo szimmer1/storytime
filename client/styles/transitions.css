@@ -4,7 +4,10 @@ A library of transitions for revealing the loaded images
 (Heavily) Inspired by http://tympanus.net/codrops/2013/07/02/loading-effects-for-grid-items-with-css-animations/
 
 */
-
+body {
+   background-image: url(/assets/dark.png);
+ } 
+ 
 .effect-parent {
     -webkit-perspective: 1300px;
     -moz-perspective: 1300px;
