@@ -28,7 +28,14 @@ Template.dashboard.helpers({
     },
     showDropzone: function() {
         return Session.get("showDropzone") ? true : false;
+    },
+    isImg: function() {
+        return (this.type === 'image' || this.type === undefined)
+    },
+    isText: function() {
+        return (this.type === 'text')
     }
+
 });
 
 
@@ -37,6 +44,22 @@ Template.dashboard.events({
     'click div.event-text': function(event, t) {
         $('div.event-text').hide();
         $('input.event-text').show();
+    },
+
+    'submit .event-text-form': function(e,t) {
+        var eventText = $('#event-text').val();
+        if (eventText.length <= 100) {
+            var snapshotId = Snapshots.insert({
+                eventId: Session.get('eventId'),
+                type: 'text',
+                description: eventText,
+                createdAt: new Date()
+            });
+            console.log(snapshotId);
+        }
+        else {
+            alert('Write a shorter quote!')
+        }
     },
 
   'click .upvote' : function(e, t) {
