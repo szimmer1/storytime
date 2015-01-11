@@ -50,35 +50,34 @@
     <div >
         {{#each this}}
         <div class='pull-left' style='max-width:400px;x`'>
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
         <div class="front">
             {{#if isImg}}
+            <div>
             <img class='image-stream' src={{imgUrl}}>
+            </div>
+            
             {{/if}}
             {{#if isText}}
                 <p style="color:white; position:relative;top:50px;height:0px;z-index:10'" class="event-snapshot-text">{{description}}</p>
             {{/if}}
-        </div>
-        <div class="back">
-            <div align='center' style='position:relative;top:50px;height:0px;z-index:10'>
+            <div align='center'>
               <a href='#' class='downvote'>
-                  <i class="fa fa-thumbs-down fa-5x" style="color: #CD0000"></i>
+                  <i class="fa fa-thumbs-down fa-5x" style="color: #CD0000; index:11"></i>
                   <!--<img src="/assets/downvote.png" style="max-height:50px; max-width:50px;">-->
               </a>
                 <a href='#' class='upvote'>
-                    <i class="fa fa-thumbs-up fa-5x" style="color: green"></i>
+                    <i class="fa fa-thumbs-up fa-5x" style="color: green; index:11"></i>
                     <!--<img src="/assets/upvote.png" style="max-height:50px; max-width:50px;">-->
                 </a>
             </div>
+        </div>
             {{#if isImg}}
             <img class='image-stream filpped-image' style='position:relative;' src={{imgUrl}}>
             {{/if}}
             {{#if isText}}
                 <h2 style="color:white;" class="event-snapshot-text">{{description}}</h2>
             {{/if}}
-        </div>
-    </div>
 </div>
         	<div >
                 
