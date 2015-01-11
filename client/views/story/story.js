@@ -29,4 +29,7 @@ Template.story.helpers({
 	isText: function() {
 		return (this.type === 'text')
 	},
+	eventName: function() {
+			return Session.get("eventName");
+	}
 });
