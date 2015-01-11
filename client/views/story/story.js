@@ -23,4 +23,10 @@ Template.story.helpers({
 		}
 		return "/assets/image_not_found.JPG"
 	},
+	isImg: function() {
+		return (this.type === 'image' || this.type === undefined)
+	},
+	isText: function() {
+		return (this.type === 'text')
+	},
 });

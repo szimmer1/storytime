@@ -21,7 +21,12 @@
 	<div class="Collage effect-parent">
 
 	{{#each this}}
+	{{#if isImg}}
 	  <img style="max-width: 400px; height: auto;" src={{imgUrl}} width="400">
+	{{/if}}
+	{{#if isText}}
+                <h2 style="color:white;" class="event-snapshot-text">{{description}}</h2>
+		{{/if}}
 	{{/each}}
 	</div>
 </div>	
