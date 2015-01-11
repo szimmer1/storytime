@@ -1,2 +1,34 @@
 <template name="login">
+  <div class="container" style="text-align: center">
+    <div class="jumbotron">
+
+      {{#if isLoginForm}}
+      <h1>Please log in</h1>
+      <form class="form-signin">
+        <input id="signin-email" type="email" class="form-control" placeholder="Email" required autofocus>
+        <input id="signin-password" type="password" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+          Sign in
+        </button>
+      </form>
+      <button class="btn btn-sm btn-enroll" style="float: left; margin-top: 15px">Create User?</button>
+      {{/if}}
+
+      {{#if isEnrollForm}}
+      <h1>Create New User</h1>
+      <form class="form-enroll">
+        <input id="signin-email" type="email" class="form-control" placeholder="Email" required autofocus>
+        <input id="signin-password" type="password" class="form-control" placeholder="Password" required>
+        <input id="signin-password-confirm" type="password" class="form-control" placeholder="Confirm Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+          Create user
+        </button>
+      </form>
+      <button class="btn btn-sm btn-login" style="float: left; margin-top: 15px">Go Back?</button>
+      {{/if}}
+
+
+
+    </div>
+  </div>
 </template>
