@@ -1,6 +1,27 @@
 <template name='events'>
-  <p> Hello Events!</p>
+	<style>
+	.eventBlock{
+		height: 200px;
+		background: linear-gradient(
+			rgba(51, 102, 255, 0.4),
+			rgba(51, 102, 255, 0.4)),
+			url('/assets/obamasrs.jpg');
+		border-color: black;
+		border-style: solid solid none solid;
+		border-width: 2px;
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-position: center;
+		font-family: "Quicksand";
+	}
+</style>
+
   {{#each this}}
-    <a href="{{pathFor 'event' _eventName=name}}" class='eventListing'>#{{name}}</a>
+  <a href="{{pathFor 'event' _eventName=name}}" class='eventListing' style="color: white;">
+  <div class="eventBlock" style="background-image:url('{{splashUrl}}')">
+     <p style="font-size: 100px; text-align: center; padding: 20px 0px 0px 0px">#{{name}}</p>
+   </div>
+</a>
+
   {{/each}}
 </template>
