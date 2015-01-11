@@ -1,6 +1,8 @@
 <template name="dashboard">
     {{#if currentUser}}
+    {{#if showDropzone}}
     {{> dropzone}}
+    {{/if}}
 	<table>
         <thead>
         </thead>
