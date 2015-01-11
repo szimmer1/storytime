@@ -12,7 +12,7 @@ Template.dashboard.helpers({
                 return image.url();
             }
         }
-        return "/assets/image_not_found.JPG"
+        return "/assets/image_not_found.png"
     },
     timeStamp: function() {
         var time;
