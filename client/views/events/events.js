@@ -1,6 +1,11 @@
 /**
  * Created by mzimmerman on 1/10/15.
  */
+Template.events.events({
+    'click .fa-remove': function() {
+        Events.remove(this._id);
+    }
+});
 
 Template.events.helpers({
     splashUrl: function() {

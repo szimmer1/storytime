@@ -1,6 +1,7 @@
 <template name='events'>
   <p> Hello Events!</p>
   {{#each this}}
+    <a href="javascript:void(0)"><i class="fa fa-remove"></i></a>
     <a href="{{pathFor 'event' _eventName=name}}" class='eventListing'>#{{name}}</a>
   {{#if splashUrl}}
     <img src={{splashUrl}} style="height:25%;width:25%">
