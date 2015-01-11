@@ -1,3 +1,9 @@
+Template.navigation.helpers({
+'addToolTips': function(){
+  $('[data-toggle="addEventModal"]').tooltip({placement:'bottom'});
+}
+ 
+})
 Template.navigation.events({
   'click #add-event' : function(event, t) {
     event.preventDefault();
