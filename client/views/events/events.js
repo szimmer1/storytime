@@ -14,7 +14,7 @@ Template.events.helpers({
     splashUrl: function() {
         var topSnapshot;
         if (Snapshots.getTopVotedArray(this._id)[0]) {
-            topSnapshot = Snapshots.getTopVotedIds(this._id)[0];
+            topSnapshot = Snapshots.getTopVotedArray(this._id)[0];
         }
         else {
             topSnapshot = Snapshots.findOne({eventId: this._id});
@@ -32,4 +32,4 @@ Template.events.helpers({
         }
         return "/image_not_found.jpeg"
     }
-})
+});
