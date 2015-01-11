@@ -1,5 +1,21 @@
 <template name="dropzone">
-	<div id="dropzone" class="dropzone">
-		<div style="font-size: 45px; text-align: center; color: gray; border: 2px dotted gray; border-radius: 5px; height: 80px; width:50%; margin: 0px auto">Place files here </div>
+	<style>
+        .dropzone {
+            font-size: 45px;
+            text-align: center;
+            color: gray;
+            border: 10px dotted gray;
+            border-radius: 5px;
+            width: 50%;
+            margin: 50px 0px 50px 0px auto;
+			padding: 20px 0px 20px 0px;
+            float: left;
+        }
+	</style>
+	<div id="dropzone" class="container dropzone">
+		<i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;&nbsp;Got a pic?
 	</div>
+    <div id="dropzone" class="container dropzone">
+        <i class="fa fa-pencil"></i>&nbsp;&nbsp;&nbsp;&nbsp;Got a quote?
+    </div>
 </template>
