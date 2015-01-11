@@ -30,6 +30,14 @@ Template.events.helpers({
                 return image.url();
             }
         }
-        return "/image_not_found.jpeg"
+        return "/assets/public/image_not_found.jpeg"
     }
 })
+
+/*
+Color Array
+Blue ,  Crimson, Green , Tan
+added by Andy
+
+var Colors = new Array[#3366FF,#8000000,#006600,#CCCC00];
+*/
