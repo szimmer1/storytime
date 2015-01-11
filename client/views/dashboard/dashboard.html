@@ -15,9 +15,9 @@
             z-index: 100;
         }
         .event-snapshot-text {
-            font-size: large;
-            text-align: center;
-            text-color: orange;
+            font-size: 40px;
+            text-align: left;
+            color: #330033;
         }
     </style>
 <div id="dropzone" style="height:1000px;">
@@ -41,7 +41,7 @@
             </div>
         </form>
         </div>
-        <h3>  or Drag in media to share your piece of the story</h3>
+        <h3 style="color:white;">  or Drag in media to share your piece of the story</h3>
     </div>
     <hr>
 
@@ -57,7 +57,7 @@
             <img class='image-stream' src={{imgUrl}}>
             {{/if}}
             {{#if isText}}
-                <p class="event-snapshot-text">{{description}}</p>
+                <p style="color:white; position:relative;top:50px;height:0px;z-index:10'" class="event-snapshot-text">{{description}}</p>
             {{/if}}
         </div>
         <div class="back">
@@ -75,7 +75,7 @@
             <img class='image-stream filpped-image' style='position:relative;' src={{imgUrl}}>
             {{/if}}
             {{#if isText}}
-                <h2 class="event-snapshot-text">{{description}}</h2>
+                <h2 style="color:white;" class="event-snapshot-text">{{description}}</h2>
             {{/if}}
         </div>
     </div>

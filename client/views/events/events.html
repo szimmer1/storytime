@@ -10,6 +10,7 @@
 		background-position: center;
 		font-family: "Quicksand";
 		text-shadow: 0px 5px 7px #000000; /* horiz. shadow, vert. shadow, blur amount, 'color of shadow' */
+		font-size: 7vw;
 	}
 </style>
 
@@ -17,7 +18,7 @@
   <a href="{{pathFor 'event' _eventName=name}}" class='eventListing' style="color: white;">
     {{#if isCreator}}<a href="javascript:void(0)"><i class="fa fa-remove"></i></a>{{/if}}
       <div class="eventBlock" style="background-image:url('{{splashUrl}}')">
-     <p style="font-size: 100px; text-align: center; padding: 20px 0px 0px 0px">#{{name}}</p>
+     <p style="text-align: center; padding: 20px 0px 0px 0px"><i class="fa fa-play-circle-o fa-fw"></i>  {{name}}</p>
    </div>
   </a>
   {{/each}}

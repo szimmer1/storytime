@@ -42,12 +42,12 @@ Template.dashboard.helpers({
 Template.dashboard.events({
     'click .fa-thumbs-up' : function(e,t) {
         $(e.currentTarget).css("color",'#7CFC00');
-        $('.fa-thumbs-down').css("color","#9C9C9C");
+        $(e.currentTarget).closest('.flipper').find('.fa-thumbs-down').css("color","#9C9C9C");
     },
 
     'click .fa-thumbs-down' : function(e,t) {
         $(e.currentTarget).css("color","red");
-        $('.fa-thumbs-up').css("color","#9C9C9C");
+        $(e.currentTarget).closest('.flipper').find('.fa-thumbs-up').css("color","#9C9C9C");
     },
 
     // catch the event quote write
