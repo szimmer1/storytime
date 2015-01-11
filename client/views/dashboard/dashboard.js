@@ -32,6 +32,20 @@ Template.dashboard.helpers({
 
 
 Template.dashboard.events({
+    // catch the event quote write
+    'click div.dropzone': function(event, t) {
+        $('div.dropzone').hide();
+        $('input.dropzone').show();
+    },
+    /*
+    'mouseleave div.dropzone': function(event, t) {
+        $('div.dropzone').show();
+        $('input.dropzone').hide();
+    },
+    */
+
+
+
   'click .upvote' : function(e, t) {
     var snapId = $(e.currentTarget).attr('data-target');
     SnapshotVotes.upvote(snapId);
