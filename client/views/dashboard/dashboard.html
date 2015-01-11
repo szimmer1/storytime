@@ -1,6 +1,10 @@
 <template name="dashboard">
     {{#if currentUser}}
+
+    {{#if showDropzone}}
     {{> dropzone}}
+    {{/if}}
+
     <div class="owl-carousel">
         {{#each this}}
         	<div>

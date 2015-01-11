@@ -1,0 +1,6 @@
+<template name='events'>
+  <p> Hello Events!</p>
+  {{#each this}}
+    <a href="{{pathFor 'event' _eventName=name}}" class='eventListing'>#{{name}}</a>
+  {{/each}}
+</template>

@@ -34,4 +34,7 @@ Template.dashboard.helpers({
         }
         return new Date(time);
     },
+    showDropzone: function() {
+        return Session.get("showDropzone") ? true : false;
+    }
 });
