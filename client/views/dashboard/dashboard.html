@@ -1,20 +1,22 @@
 <template name="dashboard">
+<div id="dropzone" style="height:1000px;">
     {{#if currentUser}}
 
     {{#if showDropzone}}
-    {{> dropzone}}
+    <h1>Drag in media to share <br>your piece of the story</h1>
     {{/if}}
 
-    <div class="owl-carousel">
+    <div>
         {{#each this}}
-        	<div>
+        	<div style="max-height: 400px; margin-bottom:10px;">
         		  <a href='#' class='upvote' data-target={{_id}}>
                 <img src="/assets/upvote.png" style="max-height:50px; max-width:50px;">
               </a>
-            	<img style="max-width: 400px; height: auto;" src={{imgUrl}} width="400">
               <a href='#' class='downvote' data-target={{_id}}>
-            	  <img src="/assets/downvote.png" style="max-height:50px; max-width:50px;">
+                  <img src="/assets/downvote.png" style="max-height:50px; max-width:50px;">
               </a>
+            	<img style="max-height: 400px; width: auto;" src={{imgUrl}} width="400">
+              
             </div>
         {{/each}}
     </div>
@@ -26,4 +28,5 @@
         <!-- Enter cool splash page stuff here -->
 
     {{/if}}
+</div>
 </template>

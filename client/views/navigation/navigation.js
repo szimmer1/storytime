@@ -11,7 +11,7 @@ Template.navigation.events({
     $('#addEventModal').modal('toggle');
   },
 
-  'click #add-event-form' : function (event, t) {
+  'click #save-event-btn' : function (event, t) {
     event.preventDefault();
 
     var eventName = $('#event-name').val();

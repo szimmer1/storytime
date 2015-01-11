@@ -13,8 +13,8 @@ Template.events.helpers({
     },
     splashUrl: function() {
         var topSnapshot;
-        if (Snapshots.getTopVotedIds(this._id)[0]) {
-            topSnapshot = Snapshots.getTopVotedIds(this._id)[0];
+        if (Snapshots.getTopVotedArray(this._id)[0]) {
+            topSnapshot = Snapshots.getTopVotedArray(this._id)[0];
         }
         else {
             topSnapshot = Snapshots.findOne({eventId: this._id});
@@ -30,9 +30,10 @@ Template.events.helpers({
                 return image.url();
             }
         }
-        return "/assets/public/image_not_found.jpeg"
+        return "/assets/image_not_found.JPG"
     }
-})
+});
+
 
 /*
 Color Array
