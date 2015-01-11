@@ -34,13 +34,11 @@ Template.dashboard.helpers({
 
 Template.dashboard.events({
   'click .upvote' : function(e, t) {
-    var snapId = $(e.currentTarget).attr('data-target');
-    SnapshotVotes.upvote(snapId);
+    SnapshotVotes.upvote(this._id);
   },
 
   'click .downvote' : function(e, t) {
-    var snapId = $(e.currentTarget).attr('data-target');
-    SnapshotVotes.downvote(snapId);
+    SnapshotVotes.downvote(this._id);
   },
 
    'dropped #dropzone': function(event, temp) {
