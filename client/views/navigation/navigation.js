@@ -21,7 +21,8 @@ Template.navigation.events({
     var eventId = Events.insert({
       name : eventName,
       description : eventDescription,
-      creatingUserId : userId
+      creatingUserId : userId,
+      createdAt: new Date()
     });
 
     Router.go('events');
