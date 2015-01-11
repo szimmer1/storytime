@@ -3,20 +3,38 @@
     {{#if currentUser}}
 
     {{#if showDropzone}}
-    <h1>Drag in media to share <br>your piece of the story</h1>
+    <div class='well'><h5>Drag and drop your pictures to join the story!</h5></div>
     {{/if}}
 
-    <div>
+    <div class='row'>
         {{#each this}}
-        	<div style="max-height: 400px; margin-bottom:10px;">
-        		  <a href='#' class='upvote' data-target={{_id}}>
+        <div class='col-md-3'>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+    <div class="flipper">
+        <div class="front">
+            <img class='image-stream' src={{imgUrl}}>
+        </div>
+        <div class="back">
+            <div align='center' style='position:relative;top:50px;height:0px;'>
+            <a href='#' class='upvote' data-target={{_id}}>
                 <img src="/assets/upvote.png" style="max-height:50px; max-width:50px;">
               </a>
               <a href='#' class='downvote' data-target={{_id}}>
                   <img src="/assets/downvote.png" style="max-height:50px; max-width:50px;">
               </a>
-            	<img style="max-height: 400px; width: auto;" src={{imgUrl}} width="400">
-              
+          </div>
+            <img class='image-stream filpped-image' style='position:relative;' src={{imgUrl}}>
+        </div>
+    </div>
+</div>
+
+        	<div >
+                
+        		 
+          
+            	<img class='image-stream hidden-image' src={{imgUrl}}>
+        
+            </div>
             </div>
         {{/each}}
     </div>

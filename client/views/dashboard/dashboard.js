@@ -1,4 +1,5 @@
 Template.dashboard.helpers({
+
     imgUrl: function() {
         if (this.url) {
             return this.url
